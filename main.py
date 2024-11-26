@@ -30,8 +30,13 @@ def getReport(text, num_words, chars):
     print("Begin Report:")
     print(f"there are {num_words} words in this text!")
     print("----------Character Count----------")
-    print("\n")
-
+    for key, value in chars.items():
+        if (key.isalpha()):
+            if value != 1:
+                print(f"The character {key} is used {value} times in this text")
+            else:
+                print(f"The character {key} is used {value} time in this text")
+    return("End Report")
 
 
 main()
